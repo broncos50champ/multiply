@@ -30,10 +30,14 @@ override func viewDidLoad() {
     
     @IBAction func bmwi8(_ sender: Any) {
         
-        var first1 = number1.text
+        //the doubble ? optional,witch means the code will give it a default a value to the right of the ? if the user types in bad data.
+        var first1 = number1.text ?? ""
         
-        var first12 = number2.text
-        
+        var first12 = number2.text ?? ""
+        var firstnum = Int(first1) ?? 0
+        var secondnum = Int(first12) ?? 0
+            var multiply = firstnum * secondnum
+        displayProduct.text = "\(multiply) "
         
         
     }
